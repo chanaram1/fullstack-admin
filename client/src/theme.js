@@ -1,5 +1,5 @@
 // color design tokens export
-export const tokensDark = { //using tailwind shader extenstion press ctrl-k crtl-g
+export const tokensDark = {
   grey: {
     0: "#ffffff", // manually adjusted
     10: "#f6f6f6", // manually adjusted

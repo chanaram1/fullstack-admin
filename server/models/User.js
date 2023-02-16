@@ -1,23 +1,23 @@
 import mongoose from "mongoose";
 
-const UserSchema = new mongoose.Schema( //a user must have this structure of this data in the mongoose DB
+const UserSchema = new mongoose.Schema(
   {
-    name:{
+    name: {
       type: String,
       required: true,
-      min:2,
-      max:100
+      min: 2,
+      max: 100,
     },
-    email:{
+    email: {
       type: String,
       required: true,
-      max:50,
-      unique: true
+      max: 50,
+      unique: true,
     },
     password: {
       type: String,
       required: true,
-      min:5
+      min: 5,
     },
     city: String,
     state: String,
@@ -28,12 +28,11 @@ const UserSchema = new mongoose.Schema( //a user must have this structure of thi
     role: {
       type: String,
       enum: ["user", "admin", "superadmin"],
-      default: "admin"
+      default: "admin",
     },
   },
-  {timestamps: true}
+  { timestamps: true }
 );
 
 const User = mongoose.model("User", UserSchema);
-
 export default User;

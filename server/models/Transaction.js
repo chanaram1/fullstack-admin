@@ -1,17 +1,16 @@
 import mongoose from "mongoose";
 
-const TransactionSchema = new mongoose.Schema( //a user must have this structure of this data in the mongoose DB
+const TransactionSchema = new mongoose.Schema(
   {
     userId: String,
     cost: String,
-    prodcuts: {
+    products: {
       type: [mongoose.Types.ObjectId],
-      of: Number
-    }
+      of: Number,
+    },
   },
-  {timestamps:true}
+  { timestamps: true }
 );
 
 const Transaction = mongoose.model("Transaction", TransactionSchema);
-
 export default Transaction;

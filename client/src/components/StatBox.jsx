@@ -1,8 +1,8 @@
-import React from 'react'
-import { Box, Typography, useTheme } from '@mui/material'
-import FlexBetween from './FlexBetween'
+import React from "react";
+import { Box, Typography, useTheme } from "@mui/material";
+import FlexBetween from "./FlexBetween";
 
-const StatBox = ({title, value, increase, icon, description}) => {
+const StatBox = ({ title, value, increase, icon, description }) => {
   const theme = useTheme();
   return (
     <Box
@@ -17,26 +17,31 @@ const StatBox = ({title, value, increase, icon, description}) => {
       borderRadius="0.55rem"
     >
       <FlexBetween>
-        <Typography variant="h6" sx={{color: theme.palette.secondary[100]}}>
+        <Typography variant="h6" sx={{ color: theme.palette.secondary[100] }}>
           {title}
         </Typography>
         {icon}
       </FlexBetween>
 
-      <Typography variant="h3" fontWeight="600" sx={{color:theme.palette.secondary[200]}}>
+      <Typography
+        variant="h3"
+        fontWeight="600"
+        sx={{ color: theme.palette.secondary[200] }}
+      >
         {value}
       </Typography>
-
       <FlexBetween gap="1rem">
-        <Typography variant="h5" fontStyle="italic" sx={{color:theme.palette.light}}>
+        <Typography
+          variant="h5"
+          fontStyle="italic"
+          sx={{ color: theme.palette.secondary.light }}
+        >
           {increase}
         </Typography>
-        <Typography>
-          {description}
-        </Typography>
+        <Typography>{description}</Typography>
       </FlexBetween>
     </Box>
-  )
-}
+  );
+};
 
-export default StatBox
+export default StatBox;
